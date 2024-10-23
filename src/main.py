@@ -3,7 +3,7 @@ import time
 
 def main():
     discovery = Discovery(
-        discard_timestamps=True,
+        discard_timestamps=False,
         correct_timestamps=False
     )
     streams=[]
@@ -21,7 +21,7 @@ def main():
     
     mirror = LSLMirror(discovery=discovery)
     input("Press any key to start websocket transmission")
-    mirror.start()
+    mirror.run()
     x = input("")
 
 if __name__ == '__main__':
